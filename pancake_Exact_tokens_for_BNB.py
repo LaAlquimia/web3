@@ -57,28 +57,33 @@ print(balance)
 
 
 #Enter amount of token to sell
-tokenValue = web3.toWei(1185, 'ether')
+tokenValue = web3.toWei(763, 'ether')
 
 #Approve Token before Selling
-tokenValue2 = web3.fromWei(tokenValue, 'ether')
+tokenValue2 = web3.fromWei(115792089237316195423570985008687907853269984665640564039457584007913129639935, 'ether')
 start = time.time()
 ## APROVAR TOKEN ANTES DE PODER SWAPPEARLO
 
 
 
 
-#approve = sellTokenContract.functions.approve(panRouterContractAddress, balance).buildTransaction({
-#            'from': sender_address,
-#            'gasPrice': web3.toWei('5','gwei'),
-#            'nonce': web3.eth.get_transaction_count(sender_address),
-#            })
+approve = sellTokenContract.functions.approve(panRouterContractAddress, balance).buildTransaction({
+            'from': sender_address,
+            'gasPrice': web3.toWei('5','gwei'),
+            'nonce': web3.eth.get_transaction_count(sender_address),
+            })
 
-#signed_txn = web3.eth.account.sign_transaction(approve, private_key=config.private)
-#tx_token = web3.eth.send_raw_transaction(signed_txn.rawTransaction)
-#print("Approved: " + web3.toHex(tx_token))
+signed_txn = web3.eth.account.sign_transaction(approve, private_key=config.private)
+tx_token = web3.eth.send_raw_transaction(signed_txn.rawTransaction)
+print("Approved: " + web3.toHex(tx_token))
 
 #Wait after approve 10 seconds before sending transaction
-#time.sleep(10)
+time.sleep(10)
+
+
+
+
+
 print(f"Swapping {tokenValue2} {symbol} for BNB")
 #Swaping exact Token for ETH 
 
