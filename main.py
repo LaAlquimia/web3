@@ -2,16 +2,16 @@ import asyncio
 from pancake import get_ogt_price
 from balances import *
 from orders import *
-from config import private
+from config import private, _address
 import os
 
-_address= "0xAAC2e6F716EBfA44ff953bd1D84E8122480eC629"
+_address= ""
 
 
-grid_pct = 12/100
+grid_pct = x/100
 
 async def main():
-	orders = [0.00027,0.00023,0.00021,0.0002]
+	orders = []
 	while True :
 		price = await get_ogt_price()
 		balances = {
