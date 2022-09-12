@@ -5,12 +5,14 @@ from orders import *
 from config import private, _address
 import os
 
-_address= ""
 
+##Añadir porcentaje de Venta en cada grilla
 
 grid_pct = x/100
 
 async def main():
+
+	##Añadir el numero de ordenes en la Grilla 
 	orders = []
 	while True :
 		price = await get_ogt_price()
