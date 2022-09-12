@@ -1,7 +1,7 @@
 # web3
 Repositorio de la Web3 Por la Alquimia
 
-El SUPERBOOOT OGT! 
+Alquimia BOT 
 
 
 # PASOS 
@@ -11,13 +11,13 @@ El SUPERBOOOT OGT!
 1 Para importar una billetera con una frase, debes ejecutar : 
 
 
-python3 mnemo_to_key.py 
+-python3 mnemo_to_key.py 
 
 
-- y luego ingresar la frase semilla, luego de eso se guardará la frase y la llave privada, en el archivo account.json
+ingresar la frase semilla, luego se guardará la Dirección y la llave privada, en el archivo account.json
 
 
-- puedes modificar el archivo manuelmente e ingresar tu clave privada inmediatamente
+puedes modificar el archivo manuelmente e ingresar tu clave privada 
 
 
 

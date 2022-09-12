@@ -14,7 +14,7 @@ def mnemo_To_Key(mnemo):
 
 
 if __name__ == '__main__':
-	frase = input("Ingresa la Frase para Darte una Clave Privada:\n")
+	frase = input("Ingresa la MnemoFrase Para Logear tu cuenta	:\n")
 	account = mnemo_To_Key(frase)
 	json_object = json.dumps(account, indent=4)
 	with open("account.json", "w") as jsonfile:
