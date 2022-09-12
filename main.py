@@ -2,9 +2,13 @@ import asyncio
 from pancake import get_ogt_price
 from balances import *
 from orders import *
-from config import private, _address
 import os
 
+
+##Cargar Account
+with open('account.json','r') as jsonf:
+	account = json.load(jsonf)
+_address = account['address']
 
 ##Añadir porcentaje de Venta en cada grilla
 

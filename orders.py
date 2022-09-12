@@ -1,6 +1,15 @@
 from web3 import Web3
-from config import private
-import time 
+import time ,json
+
+
+###Pendiente encryptar key
+
+with open('account.json','r') as file: 
+	json_object = json.load(file)
+
+## Editar clave privada en caso de bot manual. 
+
+private = eval(json_object['key'])
 
 
 def limit_sell(amount, min_lim, sender_address):	
